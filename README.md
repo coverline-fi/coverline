@@ -70,5 +70,8 @@ Coverline is not available in the US or to US persons, Canada, the United Kingdo
 investors in Cuba, Belarus, Iran, North Korea, Russia, Syria, Ukraine, South Sudan, Sudan, Myanmar or Venezuela.
 Further restrictions may apply. Nothing here is an offer or advice.
 
+## Read more
+- The article introducing Coverline: https://x.com/0xMelkoreth/status/2120138851842658656
+
 ## Access and contact
 The source repositories are private. For read access as a reviewer, open an issue in this repository.
