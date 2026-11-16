@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" font-family="Inter, system-ui, sans-serif" font-size="14">
+  <rect width="920" height="430" fill="#0E151C"/>
+  <g fill="#1A232C" stroke="#33404D" stroke-width="1.2">
+    <rect x="30" y="30" width="200" height="74" rx="8"/><rect x="250" y="30" width="200" height="74" rx="8"/>
+    <rect x="470" y="30" width="200" height="74" rx="8"/><rect x="690" y="30" width="200" height="74" rx="8"/>
+    <rect x="140" y="170" width="300" height="74" rx="8"/><rect x="480" y="170" width="300" height="74" rx="8"/>
+    <rect x="30" y="320" width="860" height="84" rx="8"/>
+  </g>
+  <g fill="#F2F5F8" font-weight="600">
+    <text x="130" y="60" text-anchor="middle">App (Pro and Simple)</text><text x="350" y="60" text-anchor="middle">Marketing site</text>
+    <text x="570" y="60" text-anchor="middle">Agents</text><text x="790" y="60" text-anchor="middle">MCP server (planned)</text>
+    <text x="290" y="200" text-anchor="middle">SDK</text><text x="630" y="200" text-anchor="middle">Indexer and keeper</text>
+    <text x="460" y="350" text-anchor="middle">Contracts on Robinhood Chain (testnet 46630)</text>
+  </g>
+  <g fill="#A6B0BB" font-size="12">
+    <text x="130" y="82" text-anchor="middle">static, wallet signs</text><text x="350" y="82" text-anchor="middle">static</text>
+    <text x="570" y="82" text-anchor="middle">budgeted permissions</text><text x="790" y="82" text-anchor="middle">unsigned tx + preview, no keys</text>
+    <text x="290" y="222" text-anchor="middle">typed reads and writes, previews, trading calendar</text>
+    <text x="630" y="222" text-anchor="middle">read-only HTTP API; settles and pushes payouts</text>
+    <text x="460" y="374" text-anchor="middle">OptionsMarketV2 (100% escrow) · AgentModule (phase 2a) · oracle adapter · fee splitter · lens</text>
+  </g>
+  <g stroke="#7C8CFF" stroke-width="1.5" fill="none">
+    <path d="M130 104 L270 170"/><path d="M570 104 L310 170"/><path d="M790 104 L330 170"/><path d="M790 104 L650 170"/>
+    <path d="M130 104 L600 170" stroke-dasharray="4 4"/><path d="M290 244 L290 320"/><path d="M630 244 L630 320"/>
+  </g>
+</svg>
