@@ -39,20 +39,29 @@ the worst case, before you sign.
 | Indexer and keeper | Reorg-safe indexer with a read-only HTTP API; a keeper that settles and pushes payouts |
 | App | Pro and Simple views, Portfolio, Activity, Agents, Settings; desktop and phone |
 | UI package | Accessible components (WCAG 2.2 AA checks in CI) |
-| MCP server (planned) | Lets AI clients read the market and prepare **unsigned** transactions with the full preview. It holds no keys and never sends |
+| MCP server | Lets AI clients read the market and prepare **unsigned** transactions with the full preview. It holds no keys and never sends |
 
 ## Testnet deployment (Robinhood Chain testnet, chain 46630)
-Current set, deployed 2026-11-10. Test assets only.
+Phase 2a set with the `AgentModule`, deployed on 2026-11-25. The market was deployed at block 157695146. Test assets
+only.
 
 | Contract | Address |
 | --- | --- |
-| OptionsMarketV2 | `0x313a18f3aa23bb65D3f5031A5cB2743ad3a4c3c3` |
-| ChainlinkOracleAdapter | `0x79C8fA8af8B845aFdcF5f126aB591e58Cf2B47D9` |
-| FeeSplitter | `0x69686F71820879E5b8Fc1A6F175F7beaa83E3d29` |
-| MarketLens | `0xeC16b08c85Eb23c28485ab9841771A6321D30DA6` |
+| OptionsMarketV2 | `0xE11a90aB3Eba29a99bB89A95C683DA06eccD9CF6` |
+| AgentModule | `0x5644449AB177b1Ec67b28Ebf8FF97649F6aAc0D2` |
+| ChainlinkOracleAdapter | `0x6F557d7635aFC86c3F9c83cBAaFAc581E6b513d5` |
+| FeeSplitter | `0x56F6c23BF2C2Fcb53A082Ff133c2D6D55E460971` |
+| MarketLens | `0x907AE1446cE1e29dA308A8358218784551F137F6` |
 
-The quote token and the price feed on the testnet are mocks, used on the testnet only. A redeploy with the
-`AgentModule` (phase 2a) is planned; this table will change then.
+The quote token and the price feed on the testnet are mocks, used on the testnet only.
+
+**Public testnet demo:**
+- Site: https://coverlinefi.xyz
+- App: https://testnet.coverlinefi.xyz
+- Indexer API: https://testnet-api.coverlinefi.xyz
+- MCP endpoint: https://testnet-mcp.coverlinefi.xyz/mcp
+
+The names without `testnet` are reserved for mainnet.
 
 ## Engineering (2026-11-16)
 | Area | State |
