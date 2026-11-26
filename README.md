@@ -8,6 +8,9 @@ the worst case, before you sign.
 > value. There is no mainnet deployment. This repository is a showcase: it contains no source code. The source
 > repositories are private; reviewers can get read access on request.
 
+> **Coverline has no token, no presale and no airdrop.** These are the only official links: https://coverlinefi.xyz ·
+> https://testnet.coverlinefi.xyz · https://github.com/coverline-fi/coverline. Anyone offering a Coverline token is not us.
+
 ![Pro trading screen](assets/pro-trade.png)
 
 | Simple view: "Earn on my tokens" | The same ticket on a phone |
@@ -24,8 +27,10 @@ the worst case, before you sign.
 - **Standard expiries follow the US trading calendar.** Fridays at the market close, moved for holidays and early
   closes, from the exchange's published table.
 - **Plain previews.** The SDK simulates every order first and states: you pay, you receive, when, worst case.
-- **Budgeted agents (phase 2a).** An owner can let an agent write or buy within permissions, budgets and an expiry.
-  Funds never go to the agent.
+- **Budgeted agents (live on the testnet since 2026-11-25).** An owner can let an agent write or buy within permissions,
+  budgets and an expiry. The contract enforces it; funds never go to the agent.
+- **An MCP endpoint for AI clients (live on the testnet).** It returns unsigned transactions with the full preview. It
+  holds no keys and never sends.
 - **Honest about issuer controls.** Stock Tokens are tokenized debt securities whose issuer can pause, block or burn
   tokens. If escrowed tokens are burned, payouts are pro rata; the app says so wherever it shows a worst case.
 
@@ -63,14 +68,17 @@ The quote token and the price feed on the testnet are mocks, used on the testnet
 
 The names without `testnet` are reserved for mainnet.
 
-## Engineering (2026-11-16)
+## Engineering (2026-11-26)
 | Area | State |
 | --- | --- |
-| Contracts | 164 tests: unit, fuzz and 12 invariants (solvency, agent budgets); static analysis triaged with no high-severity finding; tests on a fork against real Robinhood Chain assets |
-| SDK | 674 tests; a weekly differential run compares the SDK's maths with the contracts: 0 differences |
+| Contracts | 227 tests passing on the deployed set (CI, 2026-11-23): unit, fuzz and invariants (solvency, agent budgets); static analysis triaged with no high-severity finding; tests on a fork against real Robinhood Chain assets |
+| SDK | a weekly differential run compares the SDK's maths with the contracts: 0 differences (2026-11-22) |
 | Indexer and keeper | Weekly soak with chain reorganisations, deferred settlements and a simulated issuer burn; the end state equals fresh chain reads |
 | App | Browser end-to-end tests on recorded data and, weekly, the full demo flow on a fork of the testnet; accessibility checks on every page |
 | Process | Small reviewed pull requests, CI on every repository, written product and design decisions |
+
+**Mainnet hardening (built, not deployed; the audit scope):** a timelock behind a Safe, a fixed oracle per series, a
+settlement price proven to be the last report at or before expiry, and hard bounds on every owner setting.
 
 **Not done yet:** external audit, legal review, mainnet. No users and no TVL: testnet only.
 
